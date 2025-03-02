@@ -1,9 +1,18 @@
+"use client";
+
+import { useState } from "react";
+
+import StartTestPrompt from "@/components/StartTestPrompt/StartTestPrompt";
+
 import { questions } from "@/data/questions";
 
 import "@/styles/home.scss";
 
 export default function Home() {
-  return (
+  const [showPrompt, setShowPrompt] = useState(true);
+  return showPrompt ? (
+    <StartTestPrompt onStart={() => setShowPrompt(false)} />
+  ) : (
     <section className="testing">
       <div className="container">
         <h1 className="testing__title">Тестирование</h1>
