@@ -1,0 +1,35 @@
+.testing {
+  &__title {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 800;
+  }
+  &__content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px 0;
+    height: 528px;
+    margin-bottom: 20px;
+    padding: 40px;
+    background: #f7f7f7;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .testing__content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 420px) {
+  .testing__title {
+    font-size: clamp(16px, 10vw, 48px);
+  }
+}

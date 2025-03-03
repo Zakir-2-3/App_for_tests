@@ -1,0 +1,67 @@
+.testing__question {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.testing__answers-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  gap: 20px 0;
+  overflow: auto;
+  width: 100%;
+}
+
+.testing__answer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0 20px;
+  &-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition:
+      background-color 0.2s,
+      border 0.2s;
+    -webkit-transition:
+      background-color 0.2s,
+      border 0.2s;
+    -moz-transition:
+      background-color 0.2s,
+      border 0.2s;
+    -ms-transition:
+      background-color 0.2s,
+      border 0.2s;
+    -o-transition:
+      background-color 0.2s,
+      border 0.2s;
+    &:checked {
+      background-color: #3300ff;
+      border: 2px solid #3300ff;
+    }
+  }
+  &-text {
+    max-width: calc(100% - 40px);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+@media (max-width: 420px) {
+  .testing__question {
+    font-size: clamp(16px, 5vw, 24px);
+  }
+  .testing__answer-text {
+    font-size: clamp(16px, 4vw, 16px);
+    padding-right: 8px;
+  }
+}

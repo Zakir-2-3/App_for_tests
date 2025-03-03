@@ -1,0 +1,36 @@
+.testing__progress {
+  &-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 1px 3px;
+  }
+  &-start,
+  &-end,
+  &-counter {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  &-bar,
+  &-fill {
+    height: 12px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+  &-bar {
+    background-color: #f7f7f7;
+  }
+  &-fill {
+    position: relative;
+    background-color: #3300ff;
+  }
+  &-counter {
+    position: absolute;
+    right: 0;
+    top: 15px;
+  }
+}
